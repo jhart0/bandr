@@ -21,7 +21,6 @@ export default class Report extends React.Component {
             let dataKeys = {}
             for (let j = 0; j < Object.keys(this.props.rows[i]).length; j++) {
                 let val = Object.values(this.props.rows[i])[j]
-                //todo: this does not work for non primitive objects still...
                 if (!this.isPrimitive(val)) {
                     val = JSON.stringify(val)
                 }
@@ -33,7 +32,7 @@ export default class Report extends React.Component {
     }
 
     isPrimitive(val) {
-        return val !== Object
+        return val !== Object(val)
     }
 
     rowGetter(i) {
