@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-require('bootstrap/dist/css/bootstrap.css');
+import React from 'react'
+require('bootstrap/dist/css/bootstrap.css')
 
-export default class HeaderRow extends React.Component{
+export default class HeaderRow extends React.Component {
     render() {
         return (
             <div className="page-header">

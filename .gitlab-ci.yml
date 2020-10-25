@@ -1,10 +1,19 @@
 image: node:latest
 
+stages:
+  - build
+  - test
+
 cache:
   paths:
     - node_modules/
 
 build:
   script:
-    - npm install
+    - npm i
     - npm run build
+
+test:
+  script:
+    - npm i
+    - npm run lint-ci
